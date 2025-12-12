@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CALAVERA MEXICAN GRILL - Authentic Mexican Flavors</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    
+
+    <style>
+
+        /* ========================================================================= */
+
+        /* IMPORTANT: COLOR PALETTE & GLOBAL STYLES */
+
+        /* ========================================================================= */
+
+        :root {
+
+            /* User's Requested Colors */
+
+            --color-red: #e74c3c;    /* Chili Red */
+
+            --color-green: #2ecc71;  /* Cactus Green */
+
+            --color-yellow: #f1c40f; /* Sombrero Yellow */
+
+            --color-orange: #e67e22; /* Flame Orange */
+
+
+
+            /* Background (FIXED: Earthy tone to avoid "white" look) */
+
+            --color-background-cream: #fbe8d5; /* Light Terracotta/Peach/Earthy Tone */
+
+
+
+            /* Typography */
+
+            --color-text-dark: #333;
+
+            --font-heading: 'Oswald', sans-serif;
+
+            --font-body: 'Montserrat', sans-serif;
+
+            --color-accent-dark: #b84a1d; /* Darker Orange/Red for Nav */
+
+        }
+
+
+
+        * {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        body {
+
+            font-family: var(--font-body);
+
+            color: var(--color-text-dark);
+
+            background-color: var(--color-background-cream);
+
+            line-height: 1.6;
+
+        }
+
+
+
+        a {
+
+            text-decoration: none;
+
+            color: var(--color-red);
+
+        }
+
+
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        section {
+
+            padding: 80px 0;
+
+        }
+
+
+
+        h2 {
+
+            font-family: var(--font-heading);
+
+            font-size: 3rem;
+
+            text-align: center;
+
+            color: var(--color-red);
+
+            margin-bottom: 40px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+        }
+
+
+
+        /* ========================================================================= */
+
+        /* NAVIGATION BAR */
+
+        /* ========================================================================= */
+
+        .navbar {
+
+            background-color: var(--color-accent-dark);
+
+            color: var(--color-background-cream);
+
+            padding: 15px 0;
+
+            position: fixed;
+
+            width: 100%;
+
+            top: 0;
+
+            left: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+
+
+        .nav-content {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+
+
+        /* LOGO CONTAINER STYLES (Includes image and text) */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            font-family: var(--font-heading);
+
+            font-size: 1.5rem;
+
+            color: var(--color-background-cream);
+
+        }
+
+
+
+        /* LOGO IMAGE STYLES (FIXED: increased size) */
+
+        .logo img {
+
+            height: 60px; /* Increased height */
+
+            margin-right: 10px;
+
+        }
+
+
+
+        .nav-links a {
+
+            color: var(--color-background-cream);
+
+            margin-left: 25px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        .nav-links a:hover {
+
+            color: var(--color-yellow);
+
+        }
+
+
+
+        /* ========================================================================= */
+
+        /* HERO SECTION */
+
+        /* ========================================================================= */
+
+        #home {
+
+            /* Background image path is just the filename. Ensure 'hero_background.jpg' is in the root folder. */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+
+                        url('hero_background.jpg') center/cover no-repeat;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 200px 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 100vh; /* Full viewport height */
+
+        }
+
+        
+
+        .hero-text h1 {
+
+            font-family: var(--font-heading);
+
+            font-size: 4.5rem;
+
+            margin-bottom: 15px;
+
+            text-shadow: 2px 2px var(--color-red);
+
+            line-height: 1;
+
+        }
+
+
+
+        .hero-text p {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 30px;
+
+            color: var(--color-yellow);
+
+        }
+
+
+
+        .btn-menu {
+
+            display: inline-block;
+
+            background-color: var(--color-green);
+
+            color: white;
+
+            padding: 12px 30px;
+
+            border-radius: 5px;
+
+            font-size: 1.1rem;
+
+            text-transform: uppercase;
+
+            font-weight: 700;
+
+            transition: background-color 0.3s;
+
+        }
+
+
+
+        .btn-menu:hover {
+
+            background-color: var(--color-red);
+
+        }
+
+
+
+        /* ========================================================================= */
+
+        /* MENU SECTION */
+
+        /* ========================================================================= */
+
+
+
+        .menu-filter {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+        }
+
+
+
+        .filter-btn {
+
+            background-color: var(--color-background-cream);
+
+            color: var(--color-text-dark);
+
+            border: 2px solid var(--color-orange);
+
+            padding: 8px 15px;
+
+            margin: 5px;
+
+            cursor: pointer;
+
+            transition: all 0.3s;
+
+            font-weight: 600;
+
+            border-radius: 20px;
+
+        }
+
+
+
+        .filter-btn.active, .filter-btn:hover {
+
+            background-color: var(--color-orange);
+
+            color: white;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+
+        .menu-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 30px;
+
+        }
+
+
+
+        .menu-item {
+
+            background-color: white; /* Item cards kept white for contrast */
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+            transition: transform 0.3s;
+
+            border-top: 5px solid var(--color-red);
+
+            text-align: center; /* Center the image placeholder area */
+
+        }
+
+
+
+        .menu-item:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+        }
+
+
+
+        /* MENU IMAGE FIX (FIXED: object-fit: contain to prevent zoom/crop) */
+
+        .menu-item-image {
+
+            width: 100%;
+
+            height: 200px; /* Set a fixed height for the container */
+
+            object-fit: contain; /* CRUCIAL FIX: Shows the whole image without cropping */
+
+            object-position: center;
+
+            padding: 10px; /* Add some padding so the image doesn't touch the edges */
+
+            background-color: #fff; /* Keep the background of the image container white */
+
+        }
+
+
+
+        .item-details {
+
+            padding: 20px;
+
+            text-align: left; /* Align text details to the left */
+
+        }
+
+
+
+        .item-details h3 {
+
+            font-family: var(--font-heading);
+
+            font-size: 1.5rem;
+
+            color: var(--color-accent-dark);
+
+            margin-bottom: 5px;
+
+        }
+
+
+
+        .item-details p {
+
+            font-size: 0.9rem;
+
+            color: #666;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .item-details .price {
+
+            font-size: 1.4rem;
+
+            font-weight: 700;
+
+            color: var(--color-green);
+
+        }
+
+        
+
+        /* ========================================================================= */
+
+        /* ABOUT & CONTACT SECTIONS */
+
+        /* ========================================================================= */
+
+        #about {
+
+            background-color: var(--color-yellow);
+
+            color: var(--color-text-dark);
+
+            padding: 60px 0;
+
+            text-align: center;
+
+        }
+
+
+
+        #about h2 {
+
+            color: var(--color-accent-dark);
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        #about p {
+
+            font-size: 1.1rem;
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        #contact {
+
+            background-color: var(--color-background-cream);
+
+        }
+
+        
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            padding-top: 20px;
+
+        }
+
+
+
+        .contact-info div {
+
+            margin-bottom: 30px;
+
+        }
+
+
+
+        .contact-info h3 {
+
+            font-family: var(--font-heading);
+
+            color: var(--color-red);
+
+            font-size: 1.8rem;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .contact-info p {
+
+            font-size: 1.1rem;
+
+        }
+
+
+
+        .map-container {
+
+            height: 400px;
+
+            border: 3px solid var(--color-green);
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+        }
+
+        
+
+        .map-container iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: none;
+
+        }
+
+
+
+        /* ========================================================================= */
+
+        /* FOOTER */
+
+        /* ========================================================================= */
+
+        footer {
+
+            background-color: var(--color-text-dark);
+
+            color: var(--color-background-cream);
+
+            text-align: center;
+
+            padding: 20px 0;
+
+            font-size: 0.9rem;
+
+        }
+
+        
+
+        footer p {
+
+            margin: 5px 0;
+
+        }
+
+
+
+        /* ========================================================================= */
+
+        /* RESPONSIVENESS */
+
+        /* ========================================================================= */
+
+        @media (max-width: 768px) {
+
+            .nav-content {
+
+                flex-direction: column;
+
+            }
+
+            .nav-links {
+
+                margin-top: 10px;
+
+            }
+
+            .nav-links a {
+
+                margin: 0 10px;
+
+                display: inline-block;
+
+            }
+
+            .hero-text h1 {
+
+                font-size: 3rem;
+
+            }
+
+            .hero-text p {
+
+                font-size: 1.2rem;
+
+            }
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .filter-btn {
+
+                font-size: 0.8rem;
+
+                padding: 6px 10px;
+
+            }
+
+            #home {
+
+                padding-top: 150px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <header class="navbar">
+
+        <div class="container nav-content">
+
+            <div class="logo">
+
+                <img src="calavera_logo.png" alt="Calavera Mexican Grill Logo">
+
+                CALAVERA MEXICAN GRILL
+
+            </div>
+
+            <nav class="nav-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#menu">Menu</a>
+
+                <a href="#about">About Us</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <section id="home">
+
+        <div class="hero-text">
+
+            <h1>Calavera Mexican Grill</h1>
+
+            <p>Experience the True Flavors of Mexico. Fresh. Bold. Authentic.</p>
+
+            <a href="#menu" class="btn-menu">View Our Menu</a>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="menu">
+
+        <div class="container">
+
+            <h2>Our Authentic Menu</h2>
+
+
+
+            <div class="menu-filter">
+
+                <button class="filter-btn active" data-category="all">All Items</button>
+
+                <button class="filter-btn" data-category="Appetizers">Appetizers</button>
+
+                <button class="filter-btn" data-category="Mains">Mains</button>
+
+                <button class="filter-btn" data-category="Diet">Diet Options</button>
+
+                <button class="filter-btn" data-category="Specials">Calevera Specials</button>
+
+                <button class="filter-btn" data-category="Drinks">Drinks</button>
+
+            </div>
+
+
+
+            <div class="menu-grid" id="menu-list">
+
+                <div class="menu-item" data-category="Appetizers">
+
+                    <img src="chips_guacamole.jpg" alt="Chips and Guacamole" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Chips and Guacamole</h3>
+
+                        <p>Creamy fresh avocado dip served with a basket of our house-made corn chips.</p>
+
+                        <span class="price">$8.50</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Appetizers">
+
+                    <img src="chips_salsa.jpg" alt="Chips and Salsa" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Chips and Salsa</h3>
+
+                        <p>Our signature zesty tomato salsa, fire-roasted, served with crispy tortilla chips.</p>
+
+                        <span class="price">$6.00</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Appetizers">
+
+                    <img src="chips_mango_salsa.jpg" alt="Chips and Mango Salsa" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Chips and Mango Salsa</h3>
+
+                        <p>Sweet, tangy mango salsa with a hint of chili, a perfect summer dip.</p>
+
+                        <span class="price">$7.50</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Appetizers">
+
+                    <img src="chips_corn_dip.jpg" alt="Chips and Creamy Corn Dip" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Chips and Creamy Corn Dip</h3>
+
+                        <p>A rich, warm dip loaded with roasted corn, cotija cheese, and mild spices.</p>
+
+                        <span class="price">$9.00</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Appetizers">
+
+                    <img src="loaded_nachos.jpg" alt="Nachos" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Nachos</h3>
+
+                        <p>A mountain of crispy chips topped with seasoned beef, melted cheese, beans, sour cream, and jalapeños.</p>
+
+                        <span class="price">$14.99</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="Mains">
+
+                    <img src="beef_soft_taco.jpg" alt="Beef Taco (Soft Shell)" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Beef Taco (Soft Shell)</h3>
+
+                        <p>Seasoned ground beef, fresh lettuce, tomatoes, and cheese in a warm soft tortilla.</p>
+
+                        <span class="price">$5.00</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Mains">
+
+                    <img src="chicken_hard_taco.jpg" alt="Chicken Taco (Hard Shell)" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Chicken Taco (Hard Shell)</h3>
+
+                        <p>Grilled chicken, crisp slaw, and a spicy aioli in a crunchy hard shell.</p>
+
+                        <span class="price">$5.25</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Mains">
+
+                    <img src="beef_burrito.jpg" alt="Beef Burrito" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Beef Burrito</h3>
+
+                        <p>A massive flour tortilla wrapped around seasoned beef, rice, beans, and melted cheese.</p>
+
+                        <span class="price">$13.50</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Mains">
+
+                    <img src="chicken_burrito.jpg" alt="Chicken Burrito" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Chicken Burrito</h3>
+
+                        <p>Grilled marinated chicken, rice, beans, and our signature salsa, tightly rolled.</p>
+
+                        <span class="price">$12.99</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Mains">
+
+                    <img src="loaded_mexican_fries.jpg" alt="Loaded Mexican Fries" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Loaded Mexican Fries</h3>
+
+                        <p>Golden crispy fries smothered in queso, pico de gallo, and your choice of meat.</p>
+
+                        <span class="price">$11.50</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="Diet">
+
+                    <img src="taco_salad.jpg" alt="Taco Salad" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Taco Salad</h3>
+
+                        <p>Seasoned beef or chicken served over fresh greens with corn, beans, and a light dressing.</p>
+
+                        <span class="price">$11.00</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Diet">
+
+                    <img src="fajita_salad.jpg" alt="Fajita Salad" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Fajita Salad</h3>
+
+                        <p>Grilled strips of sizzling fajita chicken and peppers on a bed of fresh mixed greens.</p>
+
+                        <span class="price">$12.00</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Diet">
+
+                    <img src="calavera_protein_bowl.jpg" alt="Calavera Protein Bowl" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Calavera Protein Bowl (Beef or Chicken)</h3>
+
+                        <p>High-protein bowl with quinoa, black beans, corn, avocado, and your choice of protein.</p>
+
+                        <span class="price">$13.00</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="Specials">
+
+                    <img src="fajita_pizza.jpg" alt="Fajita Pizza" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Fajita Pizza</h3>
+
+                        <p>Thin-crust pizza topped with fajita chicken, peppers, onions, and melted Mexican cheese.</p>
+
+                        <span class="price">$15.99</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Specials">
+
+                    <img src="taco_pizza.jpg" alt="Taco Pizza" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Taco Pizza</h3>
+
+                        <p>A unique crispy crust topped with taco beef, fresh lettuce, tomatoes, and sour cream swirl.</p>
+
+                        <span class="price">$14.99</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="Drinks">
+
+                    <img src="pepsi.jpg" alt="Pepsi" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Pepsi</h3>
+
+                        <p>Classic refreshing cola.</p>
+
+                        <span class="price">$2.50</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Drinks">
+
+                    <img src="7up.jpg" alt="7UP" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>7UP</h3>
+
+                        <p>Crisp, lemon-lime soda.</p>
+
+                        <span class="price">$2.50</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Drinks">
+
+                    <img src="sparkling_water.jpg" alt="Sparkling Water" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Sparkling Water</h3>
+
+                        <p>Chilled, crisp sparkling water.</p>
+
+                        <span class="price">$3.00</span>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-item" data-category="Drinks">
+
+                    <img src="tropicana.jpg" alt="Tropicana" class="menu-item-image">
+
+                    <div class="item-details">
+
+                        <h3>Tropicana</h3>
+
+                        <p>100% natural orange juice.</p>
+
+                        <span class="price">$4.00</span>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2>About Calavera</h2>
+
+            <p>
+
+                Calavera Mexican Grill is Qaraoun's destination for authentic, bold, and fresh Mexican street food. 
+
+                Our culinary journey is built on passion and the belief that great Mexican food starts with the finest, 
+
+                freshest ingredients. From our vibrant, house-made salsas and creamy guacamole to our signature 
+
+                Loaded Mexican Fries and Calavera Specials, every item is crafted to deliver an unforgettable taste of Mexico. 
+
+                We bring the fiesta to your plate every day!
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="contact">
+
+        <div class="container">
+
+            <h2>Visit Us</h2>
+
+            <div class="contact-grid">
+
+                <div class="contact-info">
+
+                    <div>
+
+                        <h3>Location</h3>
+
+                        <p>Qaraoun, West Beqaa, Lebanon</p>
+
+                        <p>Stop by and enjoy a meal in our vibrant, casual atmosphere.</p>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Call Us</h3>
+
+                        <p><strong>Phone:</strong> <a href="tel:+96178768969">+96178768969</a></p>
+
+                        <p>Call ahead for catering, reservations, or takeout orders.</p>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Opening Hours</h3>
+
+                        <p>Monday 5pm -12am
+</p>
+
+                        <p>Tuesday - Sunday 1pm- 12am</p>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="map-container">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13264.444211158141!2d35.69803023812741!3d33.5627791884024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f7b0200000001%3A0x6291a92e1b12b55!2sQaraoun%2C%20Lebanon!5e0!3m2!1sen!2sus!4v1701389000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        <div class="container">
+
+            <p>© 2024 Calavera Mexican Grill. All Rights Reserved.</p>
+
+            <p>Location: Qaraoun, West Beqaa, Lebanon</p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const filterButtons = document.querySelectorAll('.filter-btn');
+
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            const navbar = document.querySelector('.navbar');
+
+
+
+            // --- Menu Filtering Logic ---
+
+            filterButtons.forEach(button => {
+
+                button.addEventListener('click', () => {
+
+                    const category = button.getAttribute('data-category');
+
+
+
+                    // Update active button state
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    button.classList.add('active');
+
+
+
+                    // Filter items
+
+                    menuItems.forEach(item => {
+
+                        const itemCategory = item.getAttribute('data-category');
+
+                        if (category === 'all' || itemCategory === category) {
+
+                            item.style.display = 'block';
+
+                        } else {
+
+                            item.style.display = 'none';
+
+                        }
+
+                    });
+
+                });
+
+            });
+
+
+
+            // --- Smooth Scrolling for Navigation ---
+
+            document.querySelectorAll('.nav-links a').forEach(anchor => {
+
+                anchor.addEventListener('click', function (e) {
+
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+                        behavior: 'smooth'
+
+                    });
+
+                });
+
+            });
+
+
+
+            // --- Sticky Navbar (optional, but good practice) ---
+
+            window.onscroll = function() { stickyNavbar() };
+
+
+
+            function stickyNavbar() {
+
+              if (window.scrollY > 50) {
+
+                navbar.classList.add("sticky");
+
+              } else {
+
+                navbar.classList.remove("sticky");
+
+              }
+
+            }
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
